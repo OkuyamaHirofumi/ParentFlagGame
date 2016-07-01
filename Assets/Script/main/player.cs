@@ -103,6 +103,7 @@ public class player : MonoBehaviour
 		//riseFlagが立ってるときに発射モーション
 		if (riseFlag) {
 			RiseToSail ();
+//			ControllFire (true);
 		}
 		changeBG ();
 

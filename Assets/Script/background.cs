@@ -15,7 +15,8 @@ public class background : MonoBehaviour {
 		max = camera.ViewportToWorldPoint (new Vector3 (1, 1, camera.nearClipPlane));
 		width = max.x - min.x;
 		height = max.y - min.x;
-		transform.localScale = new Vector3 (width, height * 1.4f, 1);
+		transform.localScale = new Vector3 (width, height * 1.2f, 2);
+//		transform.position = new Vector3(0,0,0);
 		
 	}
 	
