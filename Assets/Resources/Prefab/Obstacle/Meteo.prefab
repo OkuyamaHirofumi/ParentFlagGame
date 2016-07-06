@@ -12,6 +12,7 @@ GameObject:
   - 65: {fileID: 6580274}
   - 23: {fileID: 2353784}
   - 114: {fileID: 11406892}
+  - 95: {fileID: 9583870}
   m_Layer: 0
   m_Name: Meteo
   m_TagString: obstacle
@@ -75,8 +76,25 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.8144497, y: 0.8858151, z: 1}
+  m_Center: {x: 0.02140966, y: -0.0428195, z: 0}
+--- !u!95 &9583870
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 114560}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b4b29ec965ebb408bb39237f6e0d1ffb, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &11406892
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -88,7 +106,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24141b04d1281426981c40c98981fbdc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 6
+  speed: 4.5
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

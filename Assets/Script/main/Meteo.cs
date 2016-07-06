@@ -10,6 +10,11 @@ public class Meteo : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		transform.position += Vector3.down * speed *Time.deltaTime;
+		if (!player.pauseFlag) {
+			if (player.charge > 0) {
+				transform.position += Vector3.down * speed *Time.deltaTime;
+			
+			}
+		}
 	}
 }

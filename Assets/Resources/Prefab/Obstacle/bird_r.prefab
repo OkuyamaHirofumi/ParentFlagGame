@@ -15,7 +15,7 @@ GameObject:
   - 114: {fileID: 11433512}
   m_Layer: 0
   m_Name: bird_r
-  m_TagString: Untagged
+  m_TagString: obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -76,8 +76,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.8277972, y: 0.51971644, z: 0.88773894}
+  m_Center: {x: -0.044700623, y: 0.057922363, z: -0.056137085}
 --- !u!95 &9583554
 Animator:
   serializedVersion: 3
@@ -106,7 +106,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0ee6922392c04a55aac232f0b9c2261, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1.5
+  speed: 1.2
   materials: []
 --- !u!1001 &100100000
 Prefab:

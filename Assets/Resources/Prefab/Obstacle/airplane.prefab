@@ -88,7 +88,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0ee6922392c04a55aac232f0b9c2261, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
+  speed: 1.5
+  camera: {fileID: 0}
+  min: {x: 0, y: 0, z: 0}
+  max: {x: 0, y: 0, z: 0}
+  direction: {x: 0, y: 0, z: 0}
   materials:
   - {fileID: 2100000, guid: 2b97b4ab9a1ef495691cd06a6d3f0f02, type: 2}
   - {fileID: 2100000, guid: e6858a9920e164ad3aadc0772e3b68dc, type: 2}

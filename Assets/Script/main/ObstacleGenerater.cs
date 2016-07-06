@@ -10,7 +10,7 @@ public class ObstacleGenerater : MonoBehaviour
 	public GameObject[] obstacle;
 	int obstacleID;
 	float timer = 0;
-	int waitingTime = 2;
+	float waitingTime = 2.5f;
 
 	void Start ()
 	{
@@ -39,9 +39,9 @@ public class ObstacleGenerater : MonoBehaviour
 	{
 		int random = Random.Range (0, 2);
 		if (random == 0) {
-			transform.position = new Vector3 (max.x + 5, (max.y - min.y) * 3 / 4, 0);
+			transform.position = new Vector3 (max.x + 1, max.y * Random.Range(0,0.9f) , 0);
 		} else {
-			transform.position = new Vector3 (min.x - 5, Random.Range ((min.y + max.y) / 2, max.y), 0);
+			transform.position = new Vector3 (min.x - 1, Random.Range ((min.y + max.y) / 2, max.y), 0);
 		}
 		Debug.Log ("random = " + random.ToString ());
 		//登った高さによって生成する障害物を
@@ -60,7 +60,7 @@ public class ObstacleGenerater : MonoBehaviour
 		if(obstacleID == 1 && random == 1){
 			obstacleID = 2;
 		}
-
+//		obstacleID = 4;
 		Instantiate (obstacle [obstacleID], transform.position, transform.rotation);
 	}
 }

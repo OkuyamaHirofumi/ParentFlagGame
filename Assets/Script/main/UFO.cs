@@ -21,7 +21,7 @@ public class UFO : MonoBehaviour {
 			direction = Vector3.left;
 			transform.rotation = Quaternion.Euler (0, 0, 180);
 		}
-		transform.position = new Vector3 (transform.position.x, max.y * 3/4 * (-1), transform.position.z);
+		transform.position = new Vector3 (transform.position.x, max.y * Random.Range(0.5f,0.8f) , transform.position.z);
 	}
 	// Update is called once per frame
 	void Update ()

@@ -22,6 +22,8 @@ public class player : MonoBehaviour
 	public GameObject background, ButtonController, PowerUpAudio, DamageAudio,EmergencyAudio;
 	public Text countText, chargeText, ScoreText;
 	public Material[] TadashiMaterial;
+	public Slider ChargeBar;
+	private float chargeMax = 300f;
 	Camera camera;
 	Vector3 min, max;
 	public Button turboBtn;
@@ -35,6 +37,11 @@ public class player : MonoBehaviour
 	const string HIGH_SCORE_KEY = "highScore";
 	Animator animator;
 	// Use this for initialization
+
+
+	void Awake(){
+		ChargeBarUpdate ();
+	}
 	void Start ()
 	{
 
@@ -75,8 +82,8 @@ public class player : MonoBehaviour
 	void Update ()
 	{	
 
-		debug (playerSpeed.ToString ());
-
+//		debug (playerSpeed.ToString ());
+		ChargeBarUpdate ();
 		if (countFlag) {
 			GameObject.Find ("EmergencyPanel").GetComponent<Image> ().enabled = true; 
 			if(!EmergencyAudio.GetComponent<AudioSource>().isPlaying)
@@ -147,7 +154,13 @@ public class player : MonoBehaviour
 		charge += (distance * 0.1f) / (interval * 20f);
 		rotateTime += 0.75f;
 	}
-
+	void ChargeBarUpdate(){
+		float chargerate = charge / chargeMax;
+		if(chargerate > 1.0f){
+			chargerate = 1.0f;
+		}
+		ChargeBar.value = chargerate;
+	}
 	private void Rotate ()
 	{
 		if (rotateTime > 0) {
@@ -189,6 +202,7 @@ public class player : MonoBehaviour
 	void EscapeTadashi ()
 	{
 		animator.SetBool ("ROTATE", false);
+		rotateTime = 0.0f;
 		//		animator.SetBool ("ESCAPE", trustartgamee);
 		riseFlag = true;
 	}
@@ -334,7 +348,7 @@ public class player : MonoBehaviour
 	{
 		if (other.tag == "obstacle") {
 			animator.SetBool ("DAMAGE", true);
-			charge -= 5.0f;
+			charge -= 15.0f;
 			Invoke ("StopDamage", 1.0f);
 			debug (other.name + "に衝突");
 			DamageAudio.GetComponent<AudioSource> ().Play ();

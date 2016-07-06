@@ -75,8 +75,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.45762214, y: 1, z: 1}
+  m_Center: {x: 0.01427424, y: -0.0000000046511377, z: 0}
 --- !u!114 &11405968
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -88,7 +88,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0ee6922392c04a55aac232f0b9c2261, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1.5
+  speed: 1
+  camera: {fileID: 0}
+  min: {x: 0, y: 0, z: 0}
+  max: {x: 0, y: 0, z: 0}
+  direction: {x: 0, y: 0, z: 0}
   materials:
   - {fileID: 2100000, guid: da382be1be6714a5480cadb7a0b6368d, type: 2}
   - {fileID: 2100000, guid: e02310ac9826f4f779f974291f9e8e95, type: 2}
